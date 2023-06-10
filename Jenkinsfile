@@ -14,9 +14,7 @@ pipeline {
 					dir ("/mnt/gol/gameoflife1") {
 						sh "mvn clean install"
 						sh "cp gameoflife-web/target/gameoflife.war /mnt/apache-tomcat-9.0.74/webapps"
-					}
-					dir ("/mnt/apache-tomcat-9.0.74/bin") {
-						sh "./startup.sh"
+						sh "sh /mnt/apache-tomcat-9.0.74/bin/startup.sh"
 					}
 					
 				}
