@@ -24,6 +24,8 @@ pipeline {
 					label {
 						label "ssh"
 						customWorkspace "/mnt/gol"
+						}
+				}		
 					steps {
 						sh "sudo rm -rf /mnt/gol/*"
 						sh "sudo git clone https://github.com/sushil-11-jadhav/gameoflife1.git"
